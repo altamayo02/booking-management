@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	--col-tertiary: #FFF6BF;
+
+	margin: 0;
+	background: var(--col-tertiary);
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+}

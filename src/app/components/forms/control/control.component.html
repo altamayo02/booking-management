@@ -1,0 +1,20 @@
+<form> <!--[formGroup]="form"-->
+	<label [for]="control.name">{{control.label}}</label>
+	
+	@switch (control.alias) {
+		@case ('textbox') {
+			<input [type]="control.type" [id]="control.name" formControlName="control.name">
+		}
+		@case ('dropdown') {
+			<select [id]="control.name" formControlName="control.name">
+				@for (option of control.options; track $index) {
+					<option [value]="option.key">{{ option.value }}</option>
+				}
+			</select>
+		}
+	}
+</form>
+@if (!isValid) {
+	<div class="errorMessage">{{control.label}} is required.</div>
+}
+  

@@ -1,0 +1,8 @@
+[
+    { "value" : "bookings", "text": "Reservas" },
+    { "value" : "flights", "text": "Vuelos" },
+    { "value" : "trade-offers", "text": "Ofertas" },
+    { "value" : "contact", "text": "Contáctanos" },
+    { "value" : "about", "text": "Conócenos" },
+    { "value" : "admin", "text": "Administrador" }
+]

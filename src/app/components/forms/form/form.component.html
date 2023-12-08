@@ -1,0 +1,15 @@
+<div>
+	<form (ngSubmit)="null"> <!--[formGroup]="form"-->
+		@for (control of controls; track $index) {
+			<div class="form-row">
+				<app-control [control]="control" [form]="form"></app-control>
+			</div>
+		}
+	</form>
+
+	@if (null) {
+		<div class="form-row">
+			<strong>Saved the following values</strong><br>{{null}}
+		</div>
+	}
+</div>

@@ -1,0 +1,22 @@
+<div class="{{ mode.value ? 'opacity-100': 'opacity-0 pointer-events-none' }} fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm transition-opacity duration-300">
+	<div class="relative m-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-[#FFF6BF] text-base font-normal leading-relaxed text-blue-gray-500 antialiased shadow-2xl">
+		<div
+		class="flex items-center p-4 text-2xl antialiased font-semibold leading-snug shrink-0 text-blue-gray-900">
+			{{ mode.display }} usuario
+		</div>
+		<div
+		class="relative p-4 text-base antialiased font-light leading-relaxed border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 text-blue-gray-500">
+			<app-form [controls]="formControls"></app-form>
+		</div>
+		<div class="flex flex-wrap items-center justify-end p-4 shrink-0 text-blue-gray-500">
+		<button (click)="closeModal()"
+		class="px-6 py-3 mr-1 font-bold text-red-500 transition-all rounded-lg middle none center hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+			Cancelar
+		</button>
+		<button (click)="submitData()"
+		class="middle none center rounded-lg bg-[#7FE9DE] py-3 px-6 font-bold text-black shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+			Añadir
+		</button>
+		</div>
+	</div>
+</div>

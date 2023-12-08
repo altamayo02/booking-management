@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+.material-symbols-rounded {
+	font-variation-settings:
+		'FILL' 1,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24
+}
+
+:host {
+	--col-primary: #A5F1E9;
+	--col-secondary: #7FE9DE;
+	--col-tertiary: #FFF6BF;
+	--col-quaternary: #f0d78e;
+	--col-font: rgb(10, 36, 44);
+	--col-font-hlight: rgb(57, 170, 207);
+
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+	"Segoe UI Symbol";
+	color: var(--col-font);
+
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+}
+
+nav {
+	display: flex;
+	align-items: center;
+
+	z-index: 1;
+	/* background: var(--col-quaternary); */
+	background-image: linear-gradient(to top, var(--col-quaternary), var(--col-primary));
+	padding: 10px 20px;
+	font-size: 20px;
+	/* box-shadow: 0px 0px 20px -10px; */
+}
+
+nav ul {
+	flex: 1;
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	margin-top: 3px;
+	padding-left: 0;
+}
+
+nav > ul > li:first-child {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+nav > ul > li:first-child > span {
+	user-select: none;
+	cursor: pointer;
+}
+
+nav > ul > li:first-child > span:hover {
+	color: var(--col-font-hlight);
+}
+
+.home {
+	font-family: "Apple Color Emoji", "Segoe UI Emoji",	"Segoe UI Symbol";
+	font-weight: bold;
+	color: var(--col-font-hlight);
+
+	user-select: none;
+	cursor: pointer;
+}
+
+.list-item {
+	width: 100%;
+	padding: 10px;
+}
+
+.list-item:hover {
+	cursor: pointer;
+	color: var(--col-font-hlight);
+}
+
+.active {
+	text-decoration: none;
+}
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	background: transparent;
+	border: 0;
+	border-radius: 8px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media (min-width: 800px) {	
+	nav {
+		padding: 20px;
+	}
+
+	nav ul {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.list-item {
+		margin-left: 20px;
+		width: fit-content;
+		padding: 0;
+	}
+
+	nav > ul > li:first-child {
+		display: none;
+	}
+}
